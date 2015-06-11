@@ -16,14 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-ME-wci">
-                                <rect key="frame" x="0.0" y="516" width="320" height="52"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-ME-wci" userLabel="Text input view">
+                                <rect key="frame" x="0.0" y="499" width="320" height="68.5"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="sample editable text tap to show keyboard" translatesAutoresizingMaskIntoConstraints="NO" id="egu-8T-KWu">
-                                        <rect key="frame" x="8" y="11" width="304" height="33"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="sample editable text tap to show keyboard (my delegate is my view controller)" translatesAutoresizingMaskIntoConstraints="NO" id="egu-8T-KWu">
+                                        <rect key="frame" x="8" y="11" width="304" height="49.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Xol-49-Q9q"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8980392157" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,6 +56,9 @@
                             <constraint firstItem="Uoe-ME-wci" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zgo-sv-dNV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textInputView" destination="Uoe-ME-wci" id="GoL-Vk-UG5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
