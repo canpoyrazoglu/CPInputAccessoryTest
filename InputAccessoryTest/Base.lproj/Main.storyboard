@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-ME-wci">
+                                <rect key="frame" x="0.0" y="516" width="320" height="52"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="sample editable text tap to show keyboard" translatesAutoresizingMaskIntoConstraints="NO" id="egu-8T-KWu">
+                                        <rect key="frame" x="8" y="11" width="304" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8980392157" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="egu-8T-KWu" secondAttribute="trailing" constant="8" id="8kT-t6-1ZP"/>
+                                    <constraint firstItem="egu-8T-KWu" firstAttribute="leading" secondItem="Uoe-ME-wci" secondAttribute="leading" constant="8" id="SdP-nj-UCW"/>
+                                    <constraint firstAttribute="bottom" secondItem="egu-8T-KWu" secondAttribute="bottom" constant="8" id="Vpt-29-2XH"/>
+                                    <constraint firstItem="egu-8T-KWu" firstAttribute="top" secondItem="Uoe-ME-wci" secondAttribute="top" constant="11" id="oJC-qr-CVi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAQ-LC-O9b">
+                                <rect key="frame" x="61" y="269" width="199" height="30"/>
+                                <state key="normal" title="tap here to dismiss keyboard">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucU-Li-f8d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Uoe-ME-wci" secondAttribute="trailing" id="PvR-XL-7nF"/>
+                            <constraint firstAttribute="centerX" secondItem="PAQ-LC-O9b" secondAttribute="centerX" id="VTn-vA-iUs"/>
+                            <constraint firstAttribute="centerY" secondItem="PAQ-LC-O9b" secondAttribute="centerY" id="ZIw-Kw-n6R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uoe-ME-wci" secondAttribute="bottom" id="zI9-iv-UkB"/>
+                            <constraint firstItem="Uoe-ME-wci" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zgo-sv-dNV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="468"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
